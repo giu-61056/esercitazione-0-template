@@ -1,8 +1,8 @@
 # Osservazioni — Esercitazione 0
 
-Gruppo:
+Gruppo:CM-B4
 
-Componenti (nome, cognome e username GitHub di entrambi):
+Componenti ():Giulia Ferreri, MArco Donnarumma
 
 URL del repository condiviso:
 
