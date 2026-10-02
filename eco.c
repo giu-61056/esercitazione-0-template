@@ -1,30 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int leggi_intero(char *testo)
-{
-    char *fine;
-    errno = 0; //Definito in <errno.h>, va azzerato un eventuale errore precedente
-    
-    long int valore = strtol(testo, &fine, 10);
 
-    /* Nessuna cifra letta oppure caratteri rimasti dopo il numero. */
-    if (fine == testo) {
-      // Nessun numero trovato
-      fprintf(stderr, "Il secondo argomento deve essere un intero in base 10.\n");
-      exit(2);
-    } else if (*fine != '\0') {
-      // Caratteri residui, ad esempio "12abc"
-      fprintf(stderr, "Il secondo argomento deve essere un intero in base 10.\n");
-      exit(2);
-    }
-    else if (errno == ERANGE) {
-      fprintf(stderr, "Il secondo argomento ha un valore fuori intervallo (overflow o underflow)\n");
-      exit(2);
-    }
-    
-    return (int)valore;
-}
 
 int main(int argc, char *argv[])
 {
@@ -34,15 +11,10 @@ int main(int argc, char *argv[])
     }
 
     char *testo = argv[1];
-
-    int atoi(const char* str);
-    double atof(const char* str);
+    int i=atoi(argv[2]);
+    double k=atof(argv[3]);
     
-    int funz=leggi_intero();
-    printf("%s\n", testo);
-    printf("%i\n", atoi(" intero"));
-    printf("%f\n", atof("Reale"));
-
+    printf("%s %i %f\n", testo, i, k);
     /* TODO: converti gli argomenti in tipi appropriati. Usa atoi o atof
     * prendi ispirazione da:
     * https://en.cppreference.com/c/string/byte/atoi e 
