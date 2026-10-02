@@ -2,7 +2,7 @@
 
 Gruppo:CM-B4
 
-Componenti ():Giulia Ferreri, MArco Donnarumma
+Componenti :Giulia Ferreri, MArco Donnarumma
 
 URL del repository condiviso:
 
